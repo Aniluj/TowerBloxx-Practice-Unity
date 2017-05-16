@@ -15,6 +15,5 @@ public class SpawnCubos : MonoBehaviour {
 		if (Input.GetKeyDown (KeyCode.Space)) {
 			Instantiate (CuboPrefab, transform.position, Quaternion.identity);
 		}
-		
 	}
 }

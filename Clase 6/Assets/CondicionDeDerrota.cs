@@ -6,18 +6,15 @@ using UnityEngine.SceneManagement;
 public class CondicionDeDerrota : MonoBehaviour {
 
 	private Scene escena;
-	private bool condicionDeDerrota;
 
 	void Start () {
 		escena = SceneManager.GetActiveScene ();
-		condicionDeDerrota = false;
 	}
 
 	void OnCollisionEnter(Collision col)
 	{
-		if (col.gameObject.tag == "Piso" && condicionDeDerrota) {
-			Application.LoadLevel (escena.name);
+		if (col.gameObject.tag == "Piso") {
+			SceneManager.LoadScene (escena.name);
 		}
-		condicionDeDerrota = true;
 	}
 }
